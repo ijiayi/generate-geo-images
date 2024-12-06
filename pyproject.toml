@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "generate-geo-image"
+version = "0.1.0"
+description = ""
+authors = ["Jiayi Zhou <mail4jiayi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pillow = "^11.0.0"
+exif = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
