@@ -150,7 +150,10 @@ def generate_images(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate geo images within a bounding box.")
+    parser = argparse.ArgumentParser(
+        description="Generate geo images within a bounding box.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
     parser.add_argument(
         "-b",
         "--bounding-box",
