@@ -62,7 +62,7 @@ def create_image(lat, lon, output_dir, image_size=(500, 500)):
     # Adding text info to the image
     font_size = 20
     try:
-        font = ImageFont.truetype("arial.ttf", font_size)
+        font = ImageFont.truetype("SF-Mono-Regular.otf", font_size)
     except IOError:
         font = ImageFont.load_default()
 
