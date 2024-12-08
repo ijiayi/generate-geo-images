@@ -56,7 +56,7 @@ def generate_coordinates(lat_min, lat_max, lon_min, lon_max, step_km=1):
     return coordinates
 
 
-def create_static_map(coordinates, filename, zoom_level=10, image_size=(500, 500)):
+def create_static_map(coordinates, filename, zoom_level=10, image_size=(800, 800)):
     coordinates = (coordinates[1], coordinates[0])
 
     m = StaticMap(*image_size, url_template='http://a.tile.osm.org/{z}/{x}/{y}.png')
@@ -72,7 +72,7 @@ def create_static_map(coordinates, filename, zoom_level=10, image_size=(500, 500
 
 
 # Helper function to create an image with geo-information
-def create_image(lat, lon, output_dir, image_size=(500, 500), zoom_level=10):
+def create_image(lat, lon, output_dir, image_size=(800, 800), zoom_level=12):
 
     image_path = os.path.join(output_dir, f"image_{lat:.6f}_{lon:.6f}.jpg")
 
@@ -111,7 +111,7 @@ def create_image(lat, lon, output_dir, image_size=(500, 500), zoom_level=10):
 
 # Main function to generate images
 def generate_images(
-    lat_min, lat_max, lon_min, lon_max, output_dir, step_km=1, zoom_level=12, image_size=(500, 500)
+    lat_min, lat_max, lon_min, lon_max, output_dir, step_km=1, zoom_level=12, image_size=(800, 800)
 ):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -158,7 +158,7 @@ def main():
         "-b",
         "--bounding-box",
         type=str,
-        default="40.0,40.02,-74.0,-73.98",
+        default="40.7647,40.8003,-73.9814,-73.9496",
         help="Bounding box as lat_min,lat_max,lon_min,lon_max",
     )
     parser.add_argument(
@@ -173,7 +173,7 @@ def main():
         "--image-size",
         type=int,
         nargs=2,
-        default=(500, 500),
+        default=(800, 800),
         help="Image size as width and height",
     )
 
