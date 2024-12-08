@@ -123,32 +123,6 @@ def generate_images(
         create_image(lat, lon, output_dir, image_size=image_size, zoom_level=zoom_level)
 
 
-# # Specify bounding box and output directory
-# LAT_MIN = 40.0
-# LAT_MAX = 40.02
-# LON_MIN = -74.0
-# LON_MAX = -73.98
-# OUTPUT_DIR = "geo_images"
-
-# # Specify bounding box and output directory
-# LAT_MIN = 21.9
-# LAT_MAX = 25.3
-# LON_MIN = 119.5
-# LON_MAX = 122.0
-# OUTPUT_DIR = "geo_images"
-
-# generate_images(
-#     LAT_MIN,
-#     LAT_MAX,
-#     LON_MIN,
-#     LON_MAX,
-#     OUTPUT_DIR,
-#     step_km=10,
-#     zoom_level=12,
-#     image_size=(800, 800),
-# )
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Generate geo images within a bounding box.",
